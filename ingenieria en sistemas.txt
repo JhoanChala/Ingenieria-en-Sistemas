@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea de Tiempo - Ingeniería de Sistemas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .menu button {
+            margin: 5px;
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .menu button:hover {
+            background-color: #0056b3;
+        }
+        .section {
+            display: none;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .timeline .event {
+            background: white;
+            margin: 20px;
+            padding: 15px;
+            border-left: 5px solid #007bff;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .timeline .event h3 {
+            margin: 0;
+            color: #007bff;
+        }
+        .timeline .event p {
+            margin: 5px 0 0;
+        }
+        .timeline .event img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Evolución de la Ingeniería de Sistemas</h1>
+        <div class="menu">
+            <button onclick="showSection('historia')">Historia</button>
+            <button onclick="showSection('actualidad')">Actualidad</button>
+            <button onclick="showSection('tendencias')">Tendencias y Futuro</button>
+        </div>
+        
+        <div id="historia" class="section" style="display: block;">
+            <div class="timeline">
+                <div class="event">
+                    <h3>1950s - Nacimiento de la Ingeniería de Sistemas</h3>
+                    <p>La Ingeniería de Sistemas nace como una disciplina enfocada en el estudio y diseño de sistemas complejos, basada en la Teoría General de Sistemas de Ludwig von Bertalanffy y en la cibernética de Norbert Wiener.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/First_computer_UNIVAC.jpg" alt="Primeros computadores" />
+                </div>
+                <div class="event">
+                    <h3>1980s - Software libre y redes</h3>
+                    <p>Con el auge del software libre impulsado por Richard Stallman y el desarrollo de redes, la Ingeniería de Sistemas se centra en el desarrollo de protocolos como TCP/IP, facilitando la conectividad global.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/GNU_Logo.svg" alt="Logo de GNU" />
+                </div>
+                <div class="event">
+                    <h3>1990s - Expansión de Internet y bases de datos</h3>
+                    <p>Con el boom de Internet, la Ingeniería de Sistemas evoluciona con la creación de la web, comercio electrónico y bases de datos escalables.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Internet_MAP_1994.png" alt="Mapa de Internet en 1994" />
+                </div>
+                <div class="event">
+                    <h3>2000s - Computación en la nube y metodologías ágiles</h3>
+                    <p>El modelo de computación en la nube revoluciona la industria. Se popularizan metodologías ágiles como Scrum y Kanban para el desarrollo de software.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Cloud_computing.svg" alt="Computación en la nube" />
+                </div>
+                <div class="event">
+                    <h3>2010s - Inteligencia Artificial y Ciberseguridad</h3>
+                    <p>La IA, el Big Data y la ciberseguridad dominan la Ingeniería de Sistemas, con avances en aprendizaje automático y protección de datos.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Artificial_Intelligence_in_Business.jpg" alt="Inteligencia Artificial" />
+                </div>
+                <div class="event">
+                    <h3>2020s - Internet de las Cosas y Blockchain</h3>
+                    <p>Se expande la interconectividad de dispositivos inteligentes (IoT) y la tecnología blockchain, redefiniendo la seguridad digital y la descentralización.</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Blockchain.png" alt="Blockchain" />
+                </div>
+            </div>
+        </div>
+        
+        <div id="actualidad" class="section">
+            <h2>Actualidad</h2>
+            <p>Hoy en día, la Ingeniería de Sistemas abarca diversas áreas como el desarrollo de software, la ciberseguridad y la analítica de datos, con aplicaciones en múltiples industrias.</p>
+        </div>
+        
+        <div id="tendencias" class="section">
+            <h2>Tendencias y Futuro</h2>
+            <p>Las tendencias apuntan hacia la automatización, la ciberseguridad avanzada, la computación cuántica y la inteligencia artificial ética.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Autor: Jhoan Chala</p>
+            <p>Fuentes de consulta:</p>
+            <ul>
+                <li>Ludwig von Bertalanffy, "Teoría General de Sistemas"</li>
+                <li>IEEE, "Evolución de la Ingeniería de Sistemas"</li>
+                <li>ACM, "Tendencias en computación"</li>
+                <li>Richard Stallman, "Movimiento del Software Libre"</li>
+                <li>NIST, "Ciberseguridad y Blockchain"</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
